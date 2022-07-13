@@ -99,8 +99,8 @@ jQuery.fn.snvkCarousel = function (options) {
     bottomItemWrapper.appendTo(this);
     bottomItemWrapper.css({"transform": "translate3d("+ xTransBottom +"px, 0px, 0px)"});
 
-    var nextButton = jQuery("<div class='snvk-carousel-button next-'> > </div>").appendTo(this)
-    var prevButton = jQuery("<div class='snvk-carousel-button prev'> < </div>").appendTo(this)
+    var nextButton = jQuery(opts.nextButton).appendTo(this)
+    var prevButton = jQuery(opts.previousButton).appendTo(this)
 
     nextButton.css({
         width: offset,
@@ -178,5 +178,8 @@ jQuery.fn.snvkCarousel = function (options) {
 }
 
 jQuery.fn.snvkCarousel.defaults = {
-    animationDuration: 4 //seconds
+    animationDuration: 4, //seconds,
+    nextButton: "<div class='snvk-carousel-button next'> > </div>",
+    previousButton: "<div class='snvk-carousel-button prev'> < </div>"
+
 }
