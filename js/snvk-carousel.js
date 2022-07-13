@@ -38,6 +38,7 @@ jQuery.fn.snvkCarousel = function (options) {
     var opts = jQuery.extend({animationDuration: 1.5}, jQuery.fn.snvkCarousel.defaults, options)
     this.css({
         position: "relative",
+        overflow: "hidden"
     })
     var containerWidth = this.width()
     var marginLeftRight = 20;
