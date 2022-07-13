@@ -171,9 +171,8 @@ jQuery.fn.snvkCarousel = function (options) {
     prevButton.on('click', prev)
 
     return {
-        itemTWidth,
-        itemLength,
-        counter
+        nextClick: next,
+        prevClick: prev,
     }
 }
 
