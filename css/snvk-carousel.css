@@ -1,0 +1,36 @@
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+.item {
+    float: left;
+    text-align: center;
+    vertical-align: center;
+}
+.item img {
+    width: 100%;
+    margin: auto;
+    display: block;
+}
+.snvk-carousel-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffffdb;
+    font-weight: bolder;
+    font-size: 34px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
