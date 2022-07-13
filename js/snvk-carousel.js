@@ -1,40 +1,13 @@
-// Avoid `console` errors in browsers that lack a console.
-(function() {
-    var method;
-    var noop = function () {};
-    var methods = [
-        'assert', 'clear', 'count', 'debug', 'dir', 'dirxml', 'error',
-        'exception', 'group', 'groupCollapsed', 'groupEnd', 'info', 'log',
-        'markTimeline', 'profile', 'profileEnd', 'table', 'time', 'timeEnd',
-        'timeline', 'timelineEnd', 'timeStamp', 'trace', 'warn'
-    ];
-    var length = methods.length;
-    var console = (window.console = window.console || {});
+/**
+ * Snayvik Carousel
+ * @version 1.0.0
+ * @author Snayvik Tech Labs Private Limited
+ * @author Jayant Patidar
+ * @license The MIT License (MIT)
+ */
 
-    while (length--) {
-        method = methods[length];
-
-        // Only stub undefined methods.
-        if (!console[method]) {
-            console[method] = noop;
-        }
-    }
-}());
-
-// Place any jQuery/helper plugins in here.
-jQuery.fn.color = function(color) {
-    this.css("background", color)
-}
-jQuery.fn.red = function() {
-    this.color("red")
-}
-
-var colors = ['red','blue','green','yellow','cyan','orange'];
-function rColor() {
-return colors[Math.floor(Math.random()*colors.length)]
-}
-
-jQuery.fn.snvkCarousel = function (options) {
+(function(){
+    jQuery.fn.snvkCarousel = function (options) {
     var opts = jQuery.extend({animationDuration: 1.5}, jQuery.fn.snvkCarousel.defaults, options)
     this.css({
         position: "relative",
@@ -57,7 +30,6 @@ jQuery.fn.snvkCarousel = function (options) {
     var first_row = [];
     var last_row = [];
     items.each(function(index) {
-        $(this).color(rColor())
         var item = $(this);
         item.appendTo(topItemWrapper);
         item.addClass("item")
@@ -176,10 +148,10 @@ jQuery.fn.snvkCarousel = function (options) {
         prevClick: prev,
     }
 }
-
 jQuery.fn.snvkCarousel.defaults = {
     animationDuration: 4, //seconds,
     nextButton: "<div class='snvk-carousel-button next'> > </div>",
     previousButton: "<div class='snvk-carousel-button prev'> < </div>"
-
 }
+})();
+
